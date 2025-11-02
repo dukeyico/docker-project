@@ -1,21 +1,19 @@
-# Docker Capstone Project — Two-Tier Web Application
+# 🐳 Dockerized 2-Tier Web App (Java + HTML/JS)
 
-## Project Overview
-As part of our Cloud Computing cohort capstone, this project demonstrates how to containerize and deploy a **two-tier web application** using **Docker** and **Docker Compose** — combining a **backend API** and a **frontend** that communicate seamlessly.
+## 🎯 Overview
+This is a two-tier full-stack web app built with:
+- **Backend:** Spring Boot (Java + Maven)
+- **Frontend:** HTML, CSS, JavaScript (served via Nginx)
+- **Orchestration:** Docker Compose
 
-The goal is to design, build, and deploy a modern, containerized system that reflects how real-world cloud applications are structured — with clear separation between the frontend and backend, consistent networking, and easy scalability.
-
----
-
-## Objectives
-- Develop a **backend API** (Flask) and **frontend UI**
-- Create individual **Dockerfiles** for each service
-- Use **Docker Compose** to orchestrate both containers
-- Push built images to **Docker Hub**
-- Deploy the entire setup on a **Linux VM (Azure)**
-- Optionally automate builds and deployment via **GitHub Actions CI/CD**
+When you click **Show Data**, the frontend calls the backend API to display student info.
+When you click **Clear Data**, the data disappears (mock delete using JSON state).
 
 ---
 
-## Project Architecture
+## ⚙️ Setup
 
+### 1. Clone repo
+```bash
+git clone https://github.com/<your-username>/docker-project.git
+cd docker-project

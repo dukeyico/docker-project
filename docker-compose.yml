@@ -1,0 +1,27 @@
+services:
+  backend:
+    volumes:
+      - ./backend/src:/app/src
+    build: ./backend
+    container_name: java-backend
+    develop:
+      watch:
+        - action: sync
+          path: ./backend/src
+          target: /app/src
+        - action: rebuild
+          path: ./backend/pom.xml
+    ports:
+      - "8080:8080"
+  frontend:
+    build: ./frontend
+    container_name: web-frontend
+    develop:
+      watch:
+        - action: sync
+          path: ./frontend
+          target: /usr/share/nginx/html
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend

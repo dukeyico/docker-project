@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Group 1 Project</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <h1>Student Dashboard</h1>
+      <p class="subtitle">Manage student records • Add • View • Update • Delete</p>
+    </div>
+
+    <div class="actions">
+      <button id="btn-show" class="btn primary">Show Students</button>
+      <button id="btn-add" class="btn accent">Add Student</button>
+      <button id="btn-clear" class="btn warn">Clear All</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="table-wrap" id="tableWrap">
+      <table id="studentsTable" class="students-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Reg. No</th>
+            <th>Courses</th>
+            <th>Project Group</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="studentsBody">
+          <!-- rows inserted here -->
+        </tbody>
+      </table>
+      <div id="noData" class="no-data">No student data. Click "Add Student" to create entries.</div>
+    </section>
+  </main>
+
+  <!-- Modal for Add/Edit -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-card">
+      <header>
+        <h2 id="modalTitle">Add Student</h2>
+        <button id="modalClose" class="btn small">✕</button>
+      </header>
+      <form id="studentForm" class="form">
+        <input type="hidden" id="studentId" />
+        <label>
+          <span>Name</span>
+          <input id="name" required />
+        </label>
+        <label>
+          <span>Registration Number</span>
+          <input id="regNo" required />
+        </label>
+        <label>
+          <span>Courses (comma separated)</span>
+          <input id="courses" placeholder="Control Engineering, Power Electronics, DSP" />
+        </label>
+        <label>
+          <span>Project Group</span>
+          <input id="group" />
+        </label>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Save</button>
+          <button type="button" id="cancelBtn" class="btn">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <small>Group 1 Capstone • Backend: Spring Boot • Frontend: HTML/CSS/JS</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
