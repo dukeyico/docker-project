@@ -12,6 +12,7 @@ services:
           target: /app/src
         - action: rebuild
           path: ./backend/pom.xml
+
     ports:
       - "8080:8080"
   frontend:

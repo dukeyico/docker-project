@@ -1,11 +1,4 @@
-// Determine API base dynamically
-const API_BASE =
-  window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
-    ? "http://localhost:8080"
-    : "http://20.0.250.3:8080";
-
-const API = `${API_BASE}/api/students`;
-
+const API = "http://localhost:8080/api/students";
 const studentsBody = document.getElementById("studentsBody");
 const noData = document.getElementById("noData");
 const tableWrap = document.getElementById("tableWrap");
