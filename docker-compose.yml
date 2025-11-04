@@ -27,8 +27,6 @@ services:
         - action: sync
           path: ./frontend
           target: /usr/share/nginx/html
-    environment:
-      - VITE_API_URL=http://20.0.250.3:8080/api/students
     ports:
       - "5173:80"
     depends_on:

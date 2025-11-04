@@ -1,4 +1,7 @@
-const API = "http://20.0.250.3:8080/api/students";
+const isLocal = window.location.hostname === "localhost";
+const API = isLocal
+  ? "http://localhost:8080/api/students"
+  : "http://20.0.250.3:8080/api/students";
 const studentsBody = document.getElementById("studentsBody");
 const noData = document.getElementById("noData");
 const tableWrap = document.getElementById("tableWrap");
