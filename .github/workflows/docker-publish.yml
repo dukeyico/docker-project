@@ -68,4 +68,3 @@ jobs:
             sudo docker pull dukeyico/java-backend:latest
             sudo docker pull dukeyico/web-frontend:latest
             sudo docker compose up -d
-            sudo docker compose down

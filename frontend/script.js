@@ -1,4 +1,4 @@
-const API = "http://localhost:8080/api/students";
+const API = import.meta.env.VITE_API_URL;
 const studentsBody = document.getElementById("studentsBody");
 const noData = document.getElementById("noData");
 const tableWrap = document.getElementById("tableWrap");
