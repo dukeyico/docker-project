@@ -184,3 +184,7 @@ function escapeHtml(unsafe){
       .replace(/"/g, "&quot;")
       .replace(/'/g, "&#039;");
 }
+
+// Make functions accessible globally for HTML inline onclick attributes
+window.openEdit = openEdit;
+window.remove = remove;
