@@ -61,7 +61,7 @@ jobs:
           username: ${{ secrets.VM_USER }}
           key: ${{ secrets.VM_SSH_KEY }}
           script: |
-            cd ~/docker-project || git clone https://github.com/${{ github.repository }}.git docker-project
+            cd ~/docker-project || git clone https://github.com/dukeyico/docker-project.git docker-project
             cd docker-project
             git pull origin main
             sudo docker compose down
