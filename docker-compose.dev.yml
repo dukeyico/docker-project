@@ -1,6 +1,6 @@
 services:
   backend:
-    image: dukeyico/java-backend:latest
+    # image: dukeyico/java-backend:latest
     volumes:
       - ./backend/src:/app/src
     build: ./backend
@@ -16,7 +16,7 @@ services:
       - "8080:8080"
       
   frontend:
-    image: dukeyico/web-frontend:latest
+    # image: dukeyico/web-frontend:latest
     volumes:
       - ./frontend:/usr/share/nginx/html
     build: ./frontend

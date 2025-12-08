@@ -1,0 +1,16 @@
+services:
+  backend:
+    image: dukeyico/java-backend:latest
+    container_name: java-backend
+    restart: always
+    ports:
+      - "8080:8080"
+
+  frontend:
+    image: dukeyico/web-frontend:latest
+    container_name: web-frontend
+    restart: always
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend

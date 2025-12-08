@@ -51,13 +51,17 @@ jobs:
           push: true
           tags: dukeyico/web-frontend:latest
 
+      # -----------------------------
+      # Step 6: Copy docker-compose.prod.yml to Azure VM
+      # -----------------------------
+
       - name: Copy docker-compose.yml
         uses: appleboy/scp-action@v0.1.4
         with:
           host: ${{ secrets.VM_HOST }}
           username: ${{ secrets.VM_USER }}
           key: ${{ secrets.VM_SSH_KEY }}
-          source: "./docker-compose.yml"
+          source: "./docker-compose.prod.yml"
           target: "~/"
 
 
