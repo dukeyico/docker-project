@@ -51,6 +51,16 @@ jobs:
           push: true
           tags: dukeyico/web-frontend:latest
 
+      - name: Copy docker-compose.yml
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ${{ secrets.VM_HOST }}
+          username: ${{ secrets.VM_USER }}
+          key: ${{ secrets.VM_SSH_KEY }}
+          source: "./docker-compose.yml"
+          target: "~/"
+
+
       # -----------------------------
       # Step 6: Deploy on Azure VM via SSH
       # -----------------------------
